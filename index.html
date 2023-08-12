@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Social Media App</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="profile.html" target="_blank">Profile</a></li>
+                <li><a href="signup.html" target="_blank">Signup</a></li>
+                <li><a href="login.html" target="_blank">login</a></li>
+                <li><a href="#">Connect Wallet</a></li>
+                <li><a href="#" onclick="toggleUploadForm()">Create content</a></li>
+                <!-- <li><a href="#" onclick="toggleWallet()">Wallet</a></li> -->
+                <li><a href="wallet.html" target="_blank">Wallet</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="home-page">
+            <div class="scrollable-content">
+                <!-- Add your posts and content here -->
+            </div>
+        </div>
+        <div id="uploadFormContainer" class="upload-form-container">
+            <form class="upload-form">
+                <input type="file" accept="image/*" id="fileInput">
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+        <div id="walletContent" class="wallet-content">
+            <!-- Wallet content goes here -->
+            <!-- Example: <p>Your wallet information...</p> -->
+            <p>Your Account Balance</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

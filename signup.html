@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <main class="signup-page">
+        <div class="signup-form">
+            <h1>Create an Account</h1>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                
+                <button type="button" class="face-recognition-button" onclick="startFaceRecognition()">Do Face Scan</button>
+                
+                <button type="submit" class="signup-button">Sign Up</button>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        function startFaceRecognition() {
+            fetch('/start_face_scan', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => console.log(data.output))
+                .catch(error => console.error(error));
+        }
+    </script>
+</body>
+</html>
